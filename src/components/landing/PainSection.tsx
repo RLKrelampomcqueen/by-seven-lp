@@ -39,7 +39,7 @@ export function PainSection() {
         </div>
         <Reveal className="pain-cta">
           <a href="#agendar" className="link-arrow">
-            Quero entender como resolver isso
+            <span className="link-arrow-text">Quero entender como resolver isso</span>
             <ArrowRight aria-hidden="true" />
           </a>
         </Reveal>
