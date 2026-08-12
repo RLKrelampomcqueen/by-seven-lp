@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 820" role="img" aria-label="by Seven">
+  <defs>
+    <linearGradient id="wing" x1="0%" y1="0%" x2="100%" y2="35%">
+      <stop offset="0" stop-color="#C9441F"/>
+      <stop offset="1" stop-color="#E8A21F"/>
+    </linearGradient>
+    <linearGradient id="blade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0" stop-color="#D2601F"/>
+      <stop offset="1" stop-color="#EBA51E"/>
+    </linearGradient>
+  </defs>
+  <polygon points="140,140 660,141 352,268" fill="url(#wing)"/>
+  <polygon points="437,232 660,141 488,716" fill="url(#blade)"/>
+</svg>
