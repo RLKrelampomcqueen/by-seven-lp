@@ -173,7 +173,7 @@ export const AnimatedHero = ({
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 flex flex-col items-center justify-center text-center px-6 max-w-[1160px] w-full py-32 text-white"
+        className="relative z-10 flex flex-col items-center justify-center text-center px-6 max-w-[1160px] w-full pt-52 pb-32 text-white"
       >
         <motion.h1
           variants={itemVariants}

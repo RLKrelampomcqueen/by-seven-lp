@@ -39,7 +39,7 @@ export default function HeroSection() {
       }
       description="A by Seven traz o Trend Vision One™ para unificar detecção, resposta e gestão de risco em uma única plataforma — antes que o board descubra por outro caminho."
       ctaButton={{
-        text: "Quero agendar minha sessão de 30 minutos",
+        text: "Quero garantir meu teste grátis",
         onClick: scrollTo("agendar"),
         className:
           "rounded-full border-0 h-auto w-full sm:w-auto px-5 sm:px-8 py-4 text-sm sm:text-base font-bold text-white shadow-lg shadow-red-900/40 hover:opacity-90 bg-[linear-gradient(135deg,#FE7C31_0%,#F46646_35%,#E3554E_70%,#C94048_100%)] backdrop-blur-none",
