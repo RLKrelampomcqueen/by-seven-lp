@@ -287,9 +287,12 @@ html{scroll-behavior:smooth}
   background-position:right 18px center;
   background-size:16px;
 }
+/* dropdown nativo do navegador tem fundo branco — sem isso, o texto claro do
+   select fica ilegível (branco sobre branco) dentro das options */
+.field select option{color:#000;background:#fff}
 .field input:focus,.field select:focus{
-  outline:none;border-color:var(--accent-lp);
-  box-shadow:0 0 0 3px rgba(254,124,49,.18);
+  outline:none;border-color:#E3554E;
+  box-shadow:0 0 0 3px rgba(227,85,78,.28);
 }
 .field .error-msg{display:none;color:var(--danger-lp);font-size:.82rem;margin-top:6px}
 .field.invalid input,.field.invalid select{border-color:var(--danger-lp)}
