@@ -354,9 +354,7 @@ html{scroll-behavior:smooth}
 /* ===== CALCULADORA ===== */
 .calc-card{
   max-width:880px;margin:0 auto var(--space-3);
-  background:
-    radial-gradient(100% 55% at 50% 0%,rgba(254,124,49,.06),transparent 60%),
-    #202530;
+  background:#202530;
   border:2px solid #E3554E;
   border-radius:var(--radius-card-lg);padding:var(--space-4);
 }
