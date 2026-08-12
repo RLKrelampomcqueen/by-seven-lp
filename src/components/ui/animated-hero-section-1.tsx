@@ -105,12 +105,12 @@ export const AnimatedHero = ({
           >
             <source src={backgroundVideoUrl} type="video/mp4" />
           </video>
-        ) : (
+        ) : backgroundImageUrl ? (
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${backgroundImageUrl})` }}
           />
-        )}
+        ) : null}
         <div className={cn("absolute inset-0", overlayClassName ?? "bg-black/60")} />
       </div>
 
