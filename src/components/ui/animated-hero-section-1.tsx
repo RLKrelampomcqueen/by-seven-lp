@@ -209,7 +209,7 @@ export const AnimatedHero = ({
           )}
         </motion.div>
         {children && (
-          <motion.div variants={itemVariants} className="mt-10 w-full">
+          <motion.div variants={itemVariants} className="mt-16 w-full">
             {children}
           </motion.div>
         )}
