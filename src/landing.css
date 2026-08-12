@@ -270,7 +270,7 @@ html{scroll-behavior:smooth}
 .step-line{flex:1;height:1.5px;background:var(--border-hover)}
 .form-label-step{font-size:1.25rem;font-weight:700;margin-bottom:var(--space-3);letter-spacing:-.01em;color:var(--text);text-align:center}
 .field{margin-bottom:var(--space-3)}
-.field label{display:block;font-size:.88rem;font-weight:600;margin-bottom:7px;color:var(--text-secondary)}
+.field label{display:block;font-size:.88rem;font-weight:600;margin-bottom:7px;color:#FFFFFF}
 .field label .req{color:var(--accent-lp)}
 .field input,.field select{
   width:100%;background:rgba(255,255,255,.08);border:1px solid #E3554E;
