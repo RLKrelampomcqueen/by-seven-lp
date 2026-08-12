@@ -254,7 +254,7 @@ html{scroll-behavior:smooth}
   max-width:640px;margin:0 auto;
   background:
     radial-gradient(100% 55% at 50% 0%,rgba(254,124,49,.06),transparent 60%),
-    var(--surface);
+    #202530;
   border-radius:var(--radius-card-lg);padding:var(--space-5);
 }
 .ac-form-wrap{padding:var(--space-3);display:flex;justify-content:center}
@@ -353,7 +353,8 @@ html{scroll-behavior:smooth}
   max-width:880px;margin:0 auto var(--space-3);
   background:
     radial-gradient(100% 55% at 50% 0%,rgba(254,124,49,.06),transparent 60%),
-    var(--surface);
+    #202530;
+  border:2px solid #E3554E;
   border-radius:var(--radius-card-lg);padding:var(--space-4);
 }
 .calc-inputs{
