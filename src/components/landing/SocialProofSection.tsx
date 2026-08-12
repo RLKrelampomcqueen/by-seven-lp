@@ -2,7 +2,7 @@ import { Award, ShieldCheck, BookOpen, Medal, BarChart3, type LucideIcon } from 
 import { Reveal } from "./Reveal";
 import { HoverEffect } from "./HoverEffect";
 import { LogoCloud } from "@/components/ui/logo-cloud-3";
-import { TestimonialsScroller } from "@/components/ui/testimonials-scroller";
+import { TestimonialsRotator } from "@/components/ui/testimonials-scroller";
 
 // Setores atendidos (clientes sob NDA — nomes fictícios pareciam placeholder
 // e minavam a credibilidade). Quando houver logos autorizados, adicionar `src`.
@@ -44,8 +44,7 @@ const testimonials = [
   },
 ];
 
-const firstRow = testimonials.slice(0, 2);
-const secondRow = testimonials.slice(2, 4);
+const testimonialPairs = [testimonials.slice(0, 2), testimonials.slice(2, 4)];
 
 type Badge = { icon?: LucideIcon; img?: string; label: string };
 
@@ -78,9 +77,8 @@ export function SocialProofSection() {
           <span className="eyebrow">Depoimentos</span>
           <h2>O que os clientes dizem</h2>
         </Reveal>
-        <div className="mb-16 flex flex-col gap-6">
-          <TestimonialsScroller testimonials={firstRow} speed="38s" direction="left" />
-          <TestimonialsScroller testimonials={secondRow} speed="44s" direction="right" />
+        <div className="mb-16">
+          <TestimonialsRotator pairs={testimonialPairs} />
         </div>
 
         <div className="badges">

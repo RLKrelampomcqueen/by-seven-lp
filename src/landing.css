@@ -446,6 +446,9 @@ html{scroll-behavior:smooth}
 @keyframes scroll-horizontal-reverse{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 .animate-scroll-horizontal{animation:scroll-horizontal var(--scroll-duration,40s) linear infinite}
 .animate-scroll-horizontal-reverse{animation:scroll-horizontal-reverse var(--scroll-duration,40s) linear infinite}
+
+@keyframes testimonial-fade{from{opacity:0}to{opacity:1}}
+.animate-testimonial-fade{animation:testimonial-fade 0.6s ease}
 .scroller-mask:hover .animate-scroll-horizontal,
 .scroller-mask:hover .animate-scroll-horizontal-reverse{animation-play-state:paused}
 @media (prefers-reduced-motion:reduce){

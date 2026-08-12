@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
 export type ScrollerTestimonial = {
@@ -80,6 +80,44 @@ export function TestimonialsScroller({
           ))}
         </div>
       </div>
+    </div>
+  );
+}
+
+/**
+ * Duas fileiras (pares) de depoimentos revezando com fade — só 2 cards
+ * visíveis por vez, trocando de par a cada `intervalMs`.
+ */
+export function TestimonialsRotator({
+  pairs,
+  intervalMs = 6000,
+  className,
+}: {
+  pairs: ScrollerTestimonial[][];
+  intervalMs?: number;
+  className?: string;
+}) {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    if (pairs.length <= 1) return;
+    const id = setInterval(() => {
+      setActive((prev) => (prev + 1) % pairs.length);
+    }, intervalMs);
+    return () => clearInterval(id);
+  }, [pairs.length, intervalMs]);
+
+  return (
+    <div
+      className={cn(
+        "mx-auto grid max-w-3xl justify-items-center gap-6 sm:grid-cols-2 animate-testimonial-fade",
+        className
+      )}
+      key={active}
+    >
+      {pairs[active].map((t) => (
+        <TestimonialCard key={t.name} {...t} />
+      ))}
     </div>
   );
 }
