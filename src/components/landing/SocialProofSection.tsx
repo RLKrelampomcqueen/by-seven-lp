@@ -2,7 +2,7 @@ import { Award, ShieldCheck, BookOpen, Medal, BarChart3, type LucideIcon } from 
 import { Reveal } from "./Reveal";
 import { HoverEffect } from "./HoverEffect";
 import { LogoCloud } from "@/components/ui/logo-cloud-3";
-import { TestimonialsRotator } from "@/components/ui/testimonials-scroller";
+import { TestimonialsGrid } from "@/components/ui/testimonials-scroller";
 
 // Setores atendidos (clientes sob NDA — nomes fictícios pareciam placeholder
 // e minavam a credibilidade). Quando houver logos autorizados, adicionar `src`.
@@ -44,8 +44,6 @@ const testimonials = [
   },
 ];
 
-const testimonialPairs = [testimonials.slice(0, 2), testimonials.slice(2, 4)];
-
 type Badge = { icon?: LucideIcon; img?: string; label: string };
 
 // Reconhecimentos de analistas atribuídos à Trend Micro (fabricante da plataforma)
@@ -78,7 +76,7 @@ export function SocialProofSection() {
           <h2>O que os clientes dizem</h2>
         </Reveal>
         <div className="mb-16">
-          <TestimonialsRotator pairs={testimonialPairs} />
+          <TestimonialsGrid testimonials={testimonials} />
         </div>
 
         <div className="badges">

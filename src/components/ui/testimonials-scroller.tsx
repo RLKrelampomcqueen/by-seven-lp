@@ -10,9 +10,21 @@ export type ScrollerTestimonial = {
   note?: string;
 };
 
-function TestimonialCard({ text, image, name, role, note }: ScrollerTestimonial) {
+export function TestimonialCard({
+  text,
+  image,
+  name,
+  role,
+  note,
+  className,
+}: ScrollerTestimonial & { className?: string }) {
   return (
-    <div className="w-[22rem] max-w-[85vw] flex-shrink-0 rounded-2xl border border-border bg-card p-8 text-left shadow-lg shadow-red-950/20">
+    <div
+      className={cn(
+        "w-full max-w-2xl rounded-2xl border border-border bg-card p-8 text-left shadow-lg shadow-red-950/20",
+        className
+      )}
+    >
       <div className="text-sm leading-relaxed text-card-foreground">{text}</div>
       <div className="mt-5 flex items-center gap-3">
         {image ? (
@@ -45,6 +57,25 @@ function TestimonialCard({ text, image, name, role, note }: ScrollerTestimonial)
   );
 }
 
+/** Grade estática 2x2 com os 4 depoimentos (2 em cima, 2 embaixo). */
+export function TestimonialsGrid({
+  testimonials,
+  className,
+}: {
+  testimonials: ScrollerTestimonial[];
+  className?: string;
+}) {
+  return (
+    <div className={cn("mx-auto grid max-w-4xl gap-6 sm:grid-cols-2", className)}>
+      {testimonials.map((t) => (
+        <TestimonialCard key={t.name} {...t} />
+      ))}
+    </div>
+  );
+}
+
+const scrollerCardClassName = "w-[22rem] max-w-[85vw] flex-shrink-0";
+
 /**
  * Fileira de depoimentos em scroll horizontal contínuo (loop sem costura).
  * Animação em CSS (keyframes em landing.css) para permitir pausa no hover —
@@ -70,13 +101,13 @@ export function TestimonialsScroller({
       <div className={cn("flex w-max", animationClass)} style={style}>
         <div className="flex flex-shrink-0 items-stretch justify-center gap-6 px-3">
           {testimonials.map((t, i) => (
-            <TestimonialCard key={i} {...t} />
+            <TestimonialCard key={i} {...t} className={scrollerCardClassName} />
           ))}
         </div>
         {/* duplicata para o loop sem costura */}
         <div className="flex flex-shrink-0 items-stretch justify-center gap-6 px-3" aria-hidden="true">
           {testimonials.map((t, i) => (
-            <TestimonialCard key={`dup-${i}`} {...t} />
+            <TestimonialCard key={`dup-${i}`} {...t} className={scrollerCardClassName} />
           ))}
         </div>
       </div>
