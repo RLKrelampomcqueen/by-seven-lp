@@ -172,10 +172,10 @@ html{scroll-behavior:smooth}
 }
 .benefit:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(43,51,71,.14)}
 .benefit-num{
-  position:absolute;top:var(--space-3);right:var(--space-3);
   display:grid;place-items:center;width:26px;height:26px;border-radius:7px;
   font-size:.72rem;font-weight:800;color:#fff;
   background:var(--accent-lp);
+  margin:0 auto var(--space-2);
 }
 .benefit-num::after{content:none}
 .benefit-icon{

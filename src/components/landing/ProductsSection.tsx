@@ -50,10 +50,10 @@ export function ProductsSection() {
         <div className="benefits-grid">
           {products.map(({ icon: Icon, num, title, text }) => (
             <Reveal key={num} className="benefit">
+              <span className="benefit-num" aria-hidden="true">{num}</span>
               <div className="benefit-icon">
                 <Icon aria-hidden="true" />
               </div>
-              <span className="benefit-num" aria-hidden="true">{num}</span>
               <h3>{title}</h3>
               <p>{text}</p>
             </Reveal>
