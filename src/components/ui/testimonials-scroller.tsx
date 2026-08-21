@@ -21,7 +21,7 @@ export function TestimonialCard({
   return (
     <div
       className={cn(
-        "w-full max-w-2xl rounded-2xl border border-border bg-card p-8 text-left shadow-lg shadow-red-950/20",
+        "w-full max-w-2xl rounded-2xl border border-border bg-card p-8 text-left shadow-lg shadow-slate-900/5",
         className
       )}
     >
@@ -39,8 +39,7 @@ export function TestimonialCard({
           <div
             className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-full font-bold text-white"
             style={{
-              background:
-                "linear-gradient(135deg,#FE7C31 0%,#F46646 35%,#E3554E 70%,#C94048 100%)",
+              background: "linear-gradient(135deg,#EE5952 0%,#D84943 100%)",
             }}
             aria-hidden="true"
           >

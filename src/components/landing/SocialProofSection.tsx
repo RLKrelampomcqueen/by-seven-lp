@@ -1,6 +1,5 @@
 import { Award, ShieldCheck, BookOpen, Medal, BarChart3, type LucideIcon } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { HoverEffect } from "./HoverEffect";
 import { LogoCloud } from "@/components/ui/logo-cloud-3";
 import { TestimonialsGrid } from "@/components/ui/testimonials-scroller";
 
@@ -90,7 +89,6 @@ export function SocialProofSection() {
                 )}
               </span>
               {label}
-              <HoverEffect />
             </Reveal>
           ))}
         </div>

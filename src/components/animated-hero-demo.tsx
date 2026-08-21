@@ -26,7 +26,7 @@ export default function HeroSection() {
       topRightAction={
         <Button
           onClick={scrollTo("agendar")}
-          className="rounded-full border-0 px-4 text-sm font-bold text-white shadow-lg shadow-red-900/30 hover:opacity-90 bg-[linear-gradient(135deg,#FE7C31_0%,#F46646_35%,#E3554E_70%,#C94048_100%)] md:px-5 md:text-sm"
+          className="rounded-full border-0 px-4 text-sm font-bold text-white shadow-lg shadow-red-900/30 hover:opacity-90 bg-[linear-gradient(135deg,#EE5952_0%,#D84943_100%)] md:px-5 md:text-sm"
         >
           Agendar sessão
         </Button>
@@ -42,13 +42,13 @@ export default function HeroSection() {
         text: "Quero garantir meu teste grátis",
         onClick: scrollTo("agendar"),
         className:
-          "rounded-full border-0 h-auto w-full sm:w-auto px-5 sm:px-8 py-4 text-sm sm:text-base font-bold text-white shadow-lg shadow-red-900/40 hover:opacity-90 bg-[linear-gradient(135deg,#FE7C31_0%,#F46646_35%,#E3554E_70%,#C94048_100%)] backdrop-blur-none",
+          "rounded-full border-0 h-auto w-full sm:w-auto px-5 sm:px-8 py-4 text-sm sm:text-base font-bold text-white shadow-lg shadow-red-900/40 hover:opacity-90 bg-[linear-gradient(135deg,#EE5952_0%,#D84943_100%)] backdrop-blur-none",
       }}
       secondaryCta={{
         text: "Ver como funciona na prática",
         onClick: scrollTo("solucao"),
         className:
-          "rounded-full h-auto w-full sm:w-auto px-5 sm:px-8 py-4 text-sm sm:text-base font-bold bg-transparent border border-[#2B3347] text-white hover:bg-transparent hover:border-[#FE7C31] hover:text-[#FE7C31] backdrop-blur-none",
+          "rounded-full h-auto w-full sm:w-auto px-5 sm:px-8 py-4 text-sm sm:text-base font-bold bg-transparent border border-[#2B3347] text-white hover:bg-transparent hover:border-[#EE5952] hover:text-[#EE5952] backdrop-blur-none",
       }}
     >
       <div className="hero-trust">

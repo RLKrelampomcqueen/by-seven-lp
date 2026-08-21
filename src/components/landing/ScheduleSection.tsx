@@ -1,5 +1,4 @@
 import { Reveal } from "./Reveal";
-import { HoverEffect } from "./HoverEffect";
 import { ActiveCampaignForm } from "./ActiveCampaignForm";
 
 export function ScheduleSection() {
@@ -16,7 +15,6 @@ export function ScheduleSection() {
         </Reveal>
 
         <Reveal className="form-wrap ac-form-wrap">
-          <HoverEffect />
           <ActiveCampaignForm />
         </Reveal>
       </div>

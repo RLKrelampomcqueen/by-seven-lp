@@ -1,35 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600;700&display=swap');
 @import "tailwindcss";
 
 /*
-  Design tokens — by Seven (Preto Azulado) × Trend Micro (red→orange gradient)
-  Mesma paleta da LP estática (by-seven-landing/index.html).
+  Design tokens — padrão visual da LP institucional by Seven (lp.byseven.com.br):
+  fundo claro (#EDF0F7), texto navy (#2B3347), accent salmão (#EE5952),
+  cards brancos, títulos em Poppins, corpo em Inter, eyebrows em IBM Plex Sans.
+  Hero e rodapé continuam escuros (navy), como no site de referência.
 */
 :root {
-  /* by Seven — Preto Azulado scale */
-  --background: #06070a;
-  --foreground: #edeff4;
-  --card: #212737;
-  --card-foreground: #edeff4;
-  --popover: #0f1219;
-  --popover-foreground: #edeff4;
-  /* by Seven Orange como primary */
-  --primary: #f46646;
+  --background: #edf0f7;
+  --foreground: #2b3347;
+  --card: #ffffff;
+  --card-foreground: #2b3347;
+  --popover: #ffffff;
+  --popover-foreground: #2b3347;
+  --primary: #ee5952;
   --primary-foreground: #ffffff;
-  --secondary: #212737;
-  --secondary-foreground: #a6b0ca;
-  --muted: #181d28;
-  --muted-foreground: #7181aa;
-  --accent: #fe7c31;
-  --accent-foreground: #06070a;
-  --destructive: #d71920;
+  --secondary: #ffffff;
+  --secondary-foreground: #2b3347;
+  --muted: #e4e8f2;
+  --muted-foreground: #5b6584;
+  --accent: #ee5952;
+  --accent-foreground: #ffffff;
+  --destructive: #d84943;
   --destructive-foreground: #ffffff;
-  --border: #2b3347;
-  --input: #4a587b;
-  --ring: #fe7c31;
+  --border: rgba(43, 51, 71, 0.1);
+  --input: rgba(43, 51, 71, 0.18);
+  --ring: #ee5952;
   --radius: 0.75rem;
-  /* by Seven brand gradient */
-  --brand-gradient: linear-gradient(135deg, #fe7c31 0%, #f46646 35%, #e3554e 70%, #c94048 100%);
+  --brand-gradient: linear-gradient(135deg, #ee5952 0%, #d84943 100%);
 }
 
 @theme inline {
@@ -56,33 +57,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
   --font-sans: 'Inter', 'Avenir Next World', system-ui, sans-serif;
-}
-
-/* Efeito Meteors (Aceternity) — Tailwind v4: animação declarada via @theme
-   (equivale ao extend.animation/keyframes do tailwind.config.js v3) */
-@theme {
-  --animate-meteor-effect: meteor 5s linear infinite;
-
-  @keyframes meteor {
-    0% {
-      transform: rotate(215deg) translateX(0);
-      opacity: 1;
-    }
-    70% {
-      opacity: 1;
-    }
-    100% {
-      transform: rotate(215deg) translateX(-500px);
-      opacity: 0;
-    }
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-meteor-effect {
-    animation: none;
-    opacity: 0;
-  }
+  --font-heading: 'Poppins', 'Inter', system-ui, sans-serif;
+  --font-eyebrow: 'IBM Plex Sans', 'Inter', system-ui, sans-serif;
 }
 
 @layer base {

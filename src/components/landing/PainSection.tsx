@@ -8,7 +8,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { HoverEffect } from "./HoverEffect";
 
 const pains = [
   { icon: AlertTriangle, quote: '"Tenho cinco ferramentas abertas e nenhuma fala com a outra."' },
@@ -33,7 +32,6 @@ export function PainSection() {
             <Reveal key={quote} className="pain-card">
               <Icon aria-hidden="true" />
               <p>{quote}</p>
-              <HoverEffect />
             </Reveal>
           ))}
         </div>

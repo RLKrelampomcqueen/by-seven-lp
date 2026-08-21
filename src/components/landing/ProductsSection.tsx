@@ -1,7 +1,5 @@
 import { Mail, Laptop, Network, Cloud, Radar } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { HoverEffect } from "./HoverEffect";
-import { Meteors } from "@/components/ui/meteors";
 
 const products = [
   {
@@ -58,15 +56,6 @@ export function ProductsSection() {
               <span className="benefit-num" aria-hidden="true">{num}</span>
               <h3>{title}</h3>
               <p>{text}</p>
-              <HoverEffect />
-              <div className="pointer-events-none absolute inset-0 z-[-1] [mask-image:linear-gradient(to_bottom,black,transparent_38%,transparent_62%,black)]">
-                <Meteors
-                  number={6}
-                  minDuration={10}
-                  maxDuration={22}
-                  className="h-0.5 w-0.5 bg-[#FE7C31]/60 shadow-[0_0_4px_1px_#ff950025] before:h-px before:w-[70px] before:from-[#F46646]/50"
-                />
-              </div>
             </Reveal>
           ))}
         </div>
