@@ -157,12 +157,13 @@ html{scroll-behavior:smooth}
 /* ===== SOLUÇÃO ===== */
 /* 5 cards: linha de 3 + linha de 2 centralizada (grid de 6 colunas) */
 .benefits-grid{
-  display:grid;grid-template-columns:repeat(6,1fr);
+  display:flex;flex-wrap:wrap;justify-content:center;
   gap:var(--space-3);margin-bottom:var(--space-6);
 }
-.benefits-grid .benefit{grid-column:span 2}
-.benefits-grid .benefit:nth-child(4){grid-column:2/4}
-.benefits-grid .benefit:nth-child(5){grid-column:4/6}
+.benefits-grid .benefit{
+  flex:0 1 calc(33.333% - var(--space-3)*2/3);
+  box-sizing:border-box;
+}
 .benefit{
   background:var(--surface);
   border-radius:var(--radius-card-lg);padding:var(--space-4);
@@ -491,9 +492,7 @@ html{scroll-behavior:smooth}
 /* ===== RESPONSIVE ===== */
 @media (max-width:1024px){
   .pain-grid{grid-template-columns:repeat(2,1fr)}
-  .benefits-grid{grid-template-columns:repeat(2,1fr)}
-  .benefits-grid .benefit{grid-column:auto}
-  .benefits-grid .benefit:nth-child(5){grid-column:1/-1;max-width:calc(50% - var(--space-3)/2);width:100%;justify-self:center}
+  .benefits-grid .benefit{flex-basis:calc(50% - var(--space-3)/2)}
 }
 @media (max-width:900px){
   .hero-stats{grid-template-columns:repeat(2,1fr)}
@@ -515,10 +514,7 @@ html{scroll-behavior:smooth}
   .form-wrap{padding:var(--space-3)}
   .lp-section{padding:var(--space-6) 0}
   .pain-grid{grid-template-columns:1fr}
-  .benefits-grid{grid-template-columns:1fr}
-  .benefits-grid .benefit,
-  .benefits-grid .benefit:nth-child(4),
-  .benefits-grid .benefit:nth-child(5){grid-column:auto;max-width:none}
+  .benefits-grid .benefit{flex-basis:100%}
 }
 @media (max-width:560px){
   .badges{grid-template-columns:1fr}
